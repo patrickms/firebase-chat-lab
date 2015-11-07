@@ -19,7 +19,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <!-- 1. Include Firebase JS Client -->
-    <script src=""></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js">
+
+</script>
 
   </head>
   <body>
@@ -34,7 +36,9 @@
       $(document).ready(function() {
         // 2. Create a Firebase reference.
         //var myDataRef = new Firebase('https://YOUR_FIREBASE.firebaseio.com/');
+var myDataRef = 
 
+ new Firebase('https://bretchat-patrick.firebaseio.com/');
         $('#sendButton').click(function (e) {
           var textboxName = $('#nameInput').val();
           var textboxMessage = $('#messageInput').val();
@@ -43,7 +47,13 @@
           //myDataRef.set({
           //
           //});
+myDataRef.set({
 
+ name: "Bret",
+
+ text: "Hello, world!"
+
+});
           // Clear the message text box.
           $('#messageInput').val('');
         });
